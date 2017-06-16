@@ -1,0 +1,35 @@
+{% load extras %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"/>
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="icon" href="{{ 'common/img/favicon.ico'|static_url }}"  type="image/x-icon">
+  <link rel="shortcut icon" href="{{ 'common/img/favicon.ico'|static_url }}"  type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="{{ 'plugins/bootstrap-3.3.7-dist/css/bootstrap.css'|static_url }}">
+<!-- 自定义CSS -->
+  {% block css %}{% endblock %}
+</head>
+<body>
+<!-- ./nav start -->
+{% block nav %}
+{% endblock %}
+<!-- ./ end nav -->
+<!-- main-container start -->
+<div class="iner-fluid main-container">
+   <!-- 面包屑 -->
+    {% block breadcrumb %}{% endblock %}
+    <!-- 内容面板 -->
+    {% block content %}{% endblock %}
+</div><!-- ./end main-container -->
+<!-- modal start -->
+{% block modal %}
+{% endblock %}
+<!-- ./end modal -->
+<script type="text/javascript" src="{{ 'plugins/jquery/jquery-3.1.1.js'|static_url }}"></script>
+<script type="text/javascript" src="{{ 'plugins/bootstrap-3.3.7-dist/js/bootstrap.js'|static_url }}"></script>
+<!-- 自定义JS -->
+{% block js %}{% endblock %}
+</body>
+</html>

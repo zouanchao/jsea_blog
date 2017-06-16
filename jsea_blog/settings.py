@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # todo 2017-06-06 added
     'common',
     'blog',
+    'bgadmin',
 ]
 
 MIDDLEWARE = [
@@ -60,7 +61,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # 默认寻址路径就是基路径下的templates目录
         # 'DIRS': [os.path.join(BASE_DIR, 'templates')],
-        'DIRS':[],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -143,6 +144,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'common', 'static'),
     os.path.join(BASE_DIR, 'blog', 'static'),
+    os.path.join(BASE_DIR, 'bgadmin', 'static'),
 ]
 
 

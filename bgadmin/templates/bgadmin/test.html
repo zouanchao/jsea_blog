@@ -1,0 +1,36 @@
+{% extends "bgadmin/layout/base.html" %}
+{% load extras %}
+
+<!-- title start -->
+{% block title %}首页 - DTS管理后台{% endblock %}
+<!-- ./end title -->
+
+<!-- css start -->
+{% block css %}
+{% endblock %}
+<!-- ./ css -->
+
+<!-- nav start -->
+{% block nav %}
+  {% include 'bgadmin/layout/nav.html' %}
+{% endblock %}
+<!-- ./end nav -->
+
+<!-- content start -->
+{% block content %}
+  <div class="container-fluid content">
+    <form id="test_form" action="" method="post">
+      {{ form }}<br>
+      test:<b>{{ test.type }}</b><br>
+      tset_display:<b>{{ test.get_type_display }}</b><br>
+      test_1:<b>{{ test.get_type_1_display }}</b><br>
+    </form>
+  </div>
+{% endblock %}
+<!-- ./end content -->
+
+<!-- js start -->
+{% block js %}
+
+{% endblock %}
+<!-- ./end js -->

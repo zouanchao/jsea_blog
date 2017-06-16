@@ -1,0 +1,54 @@
+{% extends "bgadmin/layout/base.html" %}
+{% load extras %}
+
+<!-- title start -->
+{% block title %}首页 - DTS管理后台{% endblock %}
+<!-- ./end title -->
+
+<!-- css start -->
+{% block css %}
+{% endblock %}
+<!-- ./ css -->
+
+<!-- nav start -->
+{% block nav %}
+  {% include 'bgadmin/layout/nav.html' %}
+{% endblock %}
+<!-- ./end nav -->
+
+<!-- content start -->
+{% block content %}
+  <div class="container-fluid content">
+    <h1>Excel 导入功能测试</h1>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          Excel 导入功能测试
+        </h3>
+      </div>
+      <div class="panel-body">
+        <form id="import_excel_form" action="#" method="post">
+          {% csrf_token %}
+          <div class="form-horizontal">
+            <div class="form-group">
+              <label class="control-label col-sm-1">Excel文件</label>
+              <div class="col-sm-5">
+                <input class="form-control" type="file" name="excel_file" placeholder="请先选择文件" />
+              </div>
+              <div class="col-sm-6">
+                <button type="button" class="btn btn-success" id="import_btn">导入</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+<!-- ./end content -->
+
+<!-- js start -->
+{% block js %}
+ <script type="text/javascript" src="{{ 'js/sadmin_import_excel.js'|static_url }}"></script>
+{% endblock %}
+<!-- ./end js -->

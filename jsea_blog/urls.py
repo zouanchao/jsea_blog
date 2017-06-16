@@ -21,9 +21,10 @@ from django.contrib import admin
 from blog.views import home
 
 urlpatterns = [
-    url(r'^$',home,name="home"),
+    url(r'^$', home, name="home"),
     url(r'^admin/', admin.site.urls),
     url(r'^blog/', include('blog.urls')),
+    url(r'^bgadmin/', include('bgadmin.urls')),
 ]
 
 
