@@ -1,6 +1,6 @@
 ### JSEA_BLOG python + django 练习代码
 
-#### 前台首页【静态页面来之：[输入链接说明](http://www.yangqq.com/download/div/)】 她的博客非常不错，值得推荐
+#### 前台首页【[静态页面参考地址](http://www.yangqq.com/download/div/)】 她的博客非常不错，值得推荐
 ![输入图片说明](https://git.oschina.net/uploads/images/2017/0619/102529_251d22d5_614740.png "在这里输入图片标题")
 
 
