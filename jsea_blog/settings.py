@@ -157,3 +157,6 @@ try:
     from .settings_logging import LOGGING
 except Exception, e:
     pass
+
+FILE_CHARSET = 'utf-8'
+DEFAULT_CHARSET = 'utf-8'

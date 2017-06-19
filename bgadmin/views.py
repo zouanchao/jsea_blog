@@ -8,6 +8,7 @@ import os
 from django.conf import settings
 from django.db import transaction
 from common.utils.utils_import_excel import import_excel_util
+from common.utils.utils_file_download import big_file_download
 
 # Create your views here.
 
@@ -40,6 +41,7 @@ def import_excel(request):
                 log.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start import excel >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                 obj_dict = {0: "name", 1: "name_cn", 2: "position", 3: "qq", 4: "phone", 5: "tel"}
                 obj_list = import_excel_util(file_path, obj_dict)
+                os.remove(file_path)  # 读取完成后，删除文件
                 with transaction.atomic():
                     count = 0
                     for obj in obj_list:
@@ -71,3 +73,9 @@ def import_excel(request):
         log.exception("import_excel %s" % e)
         result = {"status": 0, "msg": "fail"}
     return JsonResponse(result)
+
+
+def down_loda_templates(request):
+    """模板下载"""
+    templates_file = os.path.join(settings.MEDIA_ROOT, "template_file/data_template.xls")
+    return big_file_download(templates_file, "data_template1.xls")

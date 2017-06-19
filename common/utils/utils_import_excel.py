@@ -1,10 +1,6 @@
 # coding: UTF-8
-import os
-import django
 import xlrd
 from common.utils.utils_log import log
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "jsea_admin.settings")  # project_name 项目名称
-django.setup()
 
 
 def import_excel_util(file_path, obj_dict):
