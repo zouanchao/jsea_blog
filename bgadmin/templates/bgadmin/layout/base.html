@@ -4,7 +4,11 @@
 
 <head>
   <meta charset="UTF-8"/>
+  <base href="{{ static_url  }}">
   <title>{% block title %}{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="google" content="notranslate">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" href="{{ 'common/img/favicon.ico'|static_url }}"  type="image/x-icon">
   <link rel="shortcut icon" href="{{ 'common/img/favicon.ico'|static_url }}"  type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="{{ 'plugins/bootstrap-3.3.7-dist/css/bootstrap.css'|static_url }}">

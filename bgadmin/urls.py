@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^$', views.bgadmin_home, name="bgadmin_home"),
     url(r'^import_excel/$', views.import_excel, name="import_excel"),
     url(r'^down_loda_templates/$', views.down_loda_templates, name="down_loda_templates"),
+    url(r'^pdf_preview/$', views.pdf_preview, name="pdf_preview"),
 ]
